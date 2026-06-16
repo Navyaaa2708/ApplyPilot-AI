@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ApplyPilot AI Settings</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="options-shell">
+      <header class="options-header">
+        <h1>ApplyPilot Settings</h1>
+        <p>Configure local AI mode, provider settings, and privacy preferences.</p>
+      </header>
+      <form id="settingsForm" class="options-form" novalidate>
+        <fieldset>
+          <legend>Notifications</legend>
+          <label>
+            <input type="checkbox" id="notificationsEnabled" /> Enable browser notifications
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Local AI Mode</legend>
+          <label>
+            <input type="checkbox" id="localAiMode" /> Enable local model inference
+          </label>
+          <label for="localAiEndpoint">Ollama endpoint</label>
+          <input id="localAiEndpoint" type="url" placeholder="https://localhost:11434" />
+          <label for="localAiModel">Preferred model</label>
+          <select id="localAiModel">
+            <option value="llama-3.3-70b">Llama 3.3 70B</option>
+            <option value="qwen-3-32b">Qwen 3 32B</option>
+            <option value="gemma-3">Gemma 3</option>
+            <option value="phi-4">Phi 4</option>
+            <option value="mistral-large">Mistral Large</option>
+          </select>
+        </fieldset>
+        <button type="submit" class="button button-primary">Save Settings</button>
+        <div id="saveStatus" class="status-text"></div>
+      </form>
+    </main>
+    <script type="module" src="options.js"></script>
+  </body>
+</html>

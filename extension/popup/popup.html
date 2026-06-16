@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ApplyPilot AI</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="popup-shell" role="main">
+      <header class="popup-header">
+        <h1>ApplyPilot AI</h1>
+      </header>
+      <section aria-labelledby="resume-section" class="popup-section">
+        <h2 id="resume-section">Resume</h2>
+        <label for="resumeInput">Upload resume</label>
+        <input id="resumeInput" type="file" accept=".pdf,.docx,.txt" aria-describedby="resumeHint" />
+        <p id="resumeHint">PDF, DOCX, and TXT supported.</p>
+        <button id="uploadResumeBtn" class="button button-primary">Upload Resume</button>
+        <p id="resumeStatus" class="status-text">No resume loaded.</p>
+      </section>
+      <section aria-labelledby="job-section" class="popup-section">
+        <h2 id="job-section">Job Analysis</h2>
+        <button id="analyzeBtn" class="button">Analyze Job</button>
+        <button id="openDashboardBtn" class="button">Open Dashboard</button>
+      </section>
+      <section aria-labelledby="settings-section" class="popup-section">
+        <h2 id="settings-section">Settings</h2>
+        <button id="optionsBtn" class="button button-secondary">Options</button>
+      </section>
+    </main>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

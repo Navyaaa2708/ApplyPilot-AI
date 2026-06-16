@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ApplyPilot Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <div class="dashboard-shell">
+      <header class="dashboard-header">
+        <div>
+          <h1>ApplyPilot Dashboard</h1>
+          <p>Your application pipeline and resume health overview.</p>
+        </div>
+        <button id="refreshBtn" class="button">Refresh</button>
+      </header>
+      <section class="dashboard-grid">
+        <article class="metric-card" aria-labelledby="totalApplicationsTitle">
+          <h2 id="totalApplicationsTitle">Total Applications</h2>
+          <p id="totalApplications">0</p>
+        </article>
+        <article class="metric-card" aria-labelledby="avgATSTitle">
+          <h2 id="avgATSTitle">Average ATS</h2>
+          <p id="avgATS">0%</p>
+        </article>
+        <article class="metric-card" aria-labelledby="interviewCountTitle">
+          <h2 id="interviewCountTitle">Interview Rate</h2>
+          <p id="interviewCount">0</p>
+        </article>
+        <article class="metric-card" aria-labelledby="offerCountTitle">
+          <h2 id="offerCountTitle">Offer Rate</h2>
+          <p id="offerCount">0</p>
+        </article>
+      </section>
+      <section class="dashboard-section" aria-labelledby="applicationsTitle">
+        <h2 id="applicationsTitle">Application Timeline</h2>
+        <div id="pipelineContainer" class="pipeline-grid"></div>
+      </section>
+    </div>
+    <script type="module" src="dashboard.js"></script>
+  </body>
+</html>
